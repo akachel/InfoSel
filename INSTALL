@@ -1,0 +1,105 @@
+*************************
+Installation Instructions
+*************************
+
+The installation procedure is divided into two sections. The first section is for users of feature selection algorithms 
+and the second for developers of feature selection algorithms and programmers interested in joining Infosel++ library 
+to other applications. The user should be aware that Infosel++ can designate either an application or the library.
+
+
+
+I. Installation procedure for users of feature selection algorithms.
+--------------------------------------------------------------------
+
+After unpacking your Infosel++ library distribution, you will find three directories: build (with make files), 
+dist (with output files; for example, library after compilation, Infosel++ application, examples of how to use Infosel++, 
+etc.), and prj (consists of all source codes). 
+
+For compiling the Infosel++ library, thw user should change the directory to directory build, where we have 
+the possibility of choosing two compilers: GNUC++ (Linux, and MinGW for Windows) , and VisualC++ (dos, Windows). 
+
+In the case of GNUC++, we have script "_build.sh" and we can simply type ". _build.sh" on the command line.
+The typical output (last line during compilation), if InfoSel++ application is created properly, appears as follows:
+
+linking ../../dist/bin/infosel++.g.exe ...
+...
+Program build success !
+
+In directory dist/bin the main Infosel++ application will be ready to use: infosel++.g.exe. If user doesn't see these several last lines
+during compilation, please contact the authors and send us file _build.log from directory build/GNUC++/out.
+
+
+
+II. Installation procedure for developers of feature selection and programmers interested in joining Infosel++ 
+library to other applications.
+-----------------------------------------------------------------------------------------------------------
+
+As a developer of an application with Infosel++ library, we have several possible compilation strategies.
+Developer can create a static Infosel++ library separately, build an Infosel++ application, 
+build scripts and binaries for testing an application, copy header files, build an environment
+with use case examples, and, finally, build documentation. For this we can use, as previously mentioned,
+script _build.sh with parameter:
+
+   _build.sh [OPTIONS] 
+
+where, options are as follows:
+
+   libs    -- generate and link all objects into a static Infosel++ library 
+   apps    -- generate and link all objects into an executable Infosel++ application 
+   tests   -- generate and link all executables and scripts needed for a testing of Infosel++ library
+   docs    -- generate an Infosel++ library documentation
+   incs    -- copy all header files
+   samples -- generate separate environment with scripts and with use case examples
+
+All commands should be processed sequentially. 
+
+   all - perform all above-mentioned steps automatically
+
+There is also an additional option:
+
+   clean - delete all outputs previously genereted by above commands
+
+After all steps, results will be stored in subdirectory "dist". In directory dist/bin we can find all executable files.
+If you want to execute a console application infosel++.g.exe, you can go to dist/bin or you can use bash script stored 
+in dist/work. In the latter case, the main infosel++ application may be used in several modes:
+
+   1. As batch mode, we need to type "_run.sh -s control.ipp", where control.ipp is an example of the script file.
+   2. As interactive mode, we need only to type _run.sh.
+
+In the following part, we will describe how to create your own applications with additional algorithms which are stored 
+in dist/src. You can create your own algorithm by copying an algorithm from the standard libpack directory and performing 
+modifications. In this case, you should change the name of class, etc.
+
+Our application in use case examples is called xyz. The source code for this example is stored in dist/src. All scripts 
+described below are stored in dist/make.
+
+By typing a command from the list below we can create:
+
+   1. _mkbat.sh xyz  -- make xyz.g.exe application with batch mode interface  
+   2. _mkcln.sh xyz  -- make xyz.g.exe application with command line interface 
+   3. _mkcon.sh xyz  -- make xyz.g.exe application with interactive interface (console mode) 
+   4. _mkshl.sh xyz  -- make xyz.g.o object with an internal interface 
+
+All created applications can be executed by _run.sh stored in dist/work.
+
+   1. _exec.sh xyz -s abc.ipp                                -- for batch mode interface 
+   2. _exec.sh xyz -in "abc.dat" -out "abc.rep" -exec xyz0   -- for command line interface
+   3. _exec.sh xyz                                           -- for other interfaces
+
+
+The names "xyz" and "abc" are only template ones and can be freely changed.
+Because a library is layered and each mode has its own module, all these interfaces can be tested separately. 
+All scripts for testing these modules are stored in directory dist/test, and you can find several shell scripts
+designed for testing the appropriate module:
+
+   1. _alltest.sh   -- script responsible for testing integrally the infosel++.g.exe application, all standard algorithms will be executed 
+   2. _apitest.sh   -- script responsible for performing an unit test of the API interface layer of Infosel++ library; in this case, we run the program bin/isseltest_api.g.exe.
+   3. _uitest.sh    -- script responsible for performing an unit test of the UI interface layer of Infosel++ library; in this case, we run the program bin/iseltest_ui.g.exe.
+   4. _fetest.sh    -- script responsible for performing an unit test of the front-end layer of Infosel++ library; in this case, we run the program bin/iseltest_fe.g.exe.
+
+Also, you can find much information about algorithms, and parameters in help, parameter -h, if you the type name of the file.
+In this case, help will be stored in the following file:
+
+   infosel.g.exe -h [file] 
+
+If you have any questions or concerns, please read tutorial. If you still have questions, please contact the authors.

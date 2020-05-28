@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="windows-1250"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="8,00"
+	Name="libapp_samples"
+	ProjectGUID="{55C9F94E-BEF2-493D-8924-34E616D74797}"
+	RootNamespace="InfoSelApplication"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="debug|Win32"
+			OutputDirectory="$(ConfigurationName)"
+			IntermediateDirectory="$(ConfigurationName)"
+			ConfigurationType="10"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="release|Win32"
+			OutputDirectory="$(ConfigurationName)"
+			IntermediateDirectory="$(ConfigurationName)"
+			ConfigurationType="10"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
+			>
+			<File
+				RelativePath="..\..\..\..\prj\libpacks\_packuse.cxx"
+				>
+				<FileConfiguration
+					Name="release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Distributing sample source file: $(InputFileName)"
+						CommandLine="copy /Y $(InputPath) ..\..\..\..\dist\src 1&gt; nul&#x0D;&#x0A;"
+						Outputs="..\..\..\..\dist\src\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\..\..\prj\libapps\samples\batmain.cpp"
+				>
+				<FileConfiguration
+					Name="release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Distributing sample source file: $(InputFileName)"
+						CommandLine="copy /Y $(InputPath) ..\..\..\..\dist\src 1&gt; nul&#x0D;&#x0A;"
+						Outputs="..\..\..\..\dist\src\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\..\..\prj\libapps\samples\clnmain.cpp"
+				>
+				<FileConfiguration
+					Name="release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Distributing sample source file: $(InputFileName)"
+						CommandLine="copy /Y $(InputPath) ..\..\..\..\dist\src 1&gt; nul&#x0D;&#x0A;"
+						Outputs="..\..\..\..\dist\src\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\..\..\prj\libapps\samples\conpuse.cpp"
+				>
+				<FileConfiguration
+					Name="release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Distributing sample source file: $(InputFileName)"
+						CommandLine="copy /Y $(InputPath) ..\..\..\..\dist\src 1&gt; nul&#x0D;&#x0A;"
+						Outputs="..\..\..\..\dist\src\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\..\..\prj\libapps\samples\shlmain.cpp"
+				>
+				<FileConfiguration
+					Name="release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Distributing sample source file: $(InputFileName)"
+						CommandLine="copy /Y $(InputPath) ..\..\..\..\dist\src 1&gt; nul&#x0D;&#x0A;"
+						Outputs="..\..\..\..\dist\src\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\..\..\prj\libapps\samples\xyz.cpp"
+				>
+				<FileConfiguration
+					Name="release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Distributing sample source file: $(InputFileName)"
+						CommandLine="copy /Y $(InputPath) ..\..\..\..\dist\src 1&gt; nul&#x0D;&#x0A;"
+						Outputs="..\..\..\..\dist\src\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter
+			Name="Command Files"
+			Filter="bat;cmd"
+			>
+			<File
+				RelativePath="..\..\..\..\prj\libapps\samples\_clean.bat"
+				>
+				<FileConfiguration
+					Name="release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Distributing sample command file: $(InputFileName)"
+						CommandLine="copy /Y $(InputPath) ..\..\..\..\dist\make 1&gt; nul&#x0D;&#x0A;"
+						Outputs="..\..\..\..\dist\make\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\..\..\prj\libapps\samples\_mkbat.bat"
+				>
+				<FileConfiguration
+					Name="release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Distributing sample command file: $(InputFileName)"
+						CommandLine="copy /Y $(InputPath) ..\..\..\..\dist\make 1&gt; nul&#x0D;&#x0A;"
+						Outputs="..\..\..\..\dist\make\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\..\..\prj\libapps\samples\_mkcln.bat"
+				>
+				<FileConfiguration
+					Name="release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Distributing sample command file: $(InputFileName)"
+						CommandLine="copy /Y $(InputPath) ..\..\..\..\dist\make 1&gt; nul&#x0D;&#x0A;"
+						Outputs="..\..\..\..\dist\make\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\..\..\prj\libapps\samples\_mkcon.bat"
+				>
+				<FileConfiguration
+					Name="release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Distributing sample command file: $(InputFileName)"
+						CommandLine="copy /Y $(InputPath) ..\..\..\..\dist\make 1&gt; nul&#x0D;&#x0A;"
+						Outputs="..\..\..\..\dist\make\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\..\..\prj\libapps\samples\_mkshl.bat"
+				>
+				<FileConfiguration
+					Name="release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Distributing sample command file: $(InputFileName)"
+						CommandLine="copy /Y $(InputPath) ..\..\..\..\dist\make 1&gt; nul&#x0D;&#x0A;"
+						Outputs="..\..\..\..\dist\make\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\..\..\prj\libapps\samples\_exec.bat"
+				>
+				<FileConfiguration
+					Name="release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Distributing sample command file: $(InputFileName)"
+						CommandLine="copy /Y $(InputPath) ..\..\..\..\dist\work 1&gt; nul&#x0D;&#x0A;"
+						Outputs="..\..\..\..\dist\work\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter
+			Name="Script Files"
+			Filter="ipp;sc"
+			>
+			<File
+				RelativePath="..\..\..\..\prj\libapps\samples\abc.ipp"
+				>
+				<FileConfiguration
+					Name="release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Distributing sample script file: $(InputFileName)"
+						CommandLine="copy /Y $(InputPath) ..\..\..\..\dist\work 1&gt; nul&#x0D;&#x0A;"
+						Outputs="..\..\..\..\dist\work\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter
+			Name="Data Files"
+			Filter="dat;in"
+			>
+			<File
+				RelativePath="..\..\..\..\prj\libapps\samples\abc.dat"
+				>
+				<FileConfiguration
+					Name="release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Distributing sample data file: $(InputFileName)"
+						CommandLine="copy /Y $(InputPath) ..\..\..\..\dist\work 1&gt; nul&#x0D;&#x0A;"
+						Outputs="..\..\..\..\dist\work\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

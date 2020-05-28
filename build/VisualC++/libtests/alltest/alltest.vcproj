@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="windows-1250"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="8,00"
+	Name="libtest_all"
+	ProjectGUID="{5EB7C0E2-BAED-4717-8FAE-11D4464DD121}"
+	RootNamespace="InfoSelTest"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="debug|Win32"
+			OutputDirectory="$(ConfigurationName)"
+			IntermediateDirectory="$(ConfigurationName)"
+			ConfigurationType="10"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="release|Win32"
+			OutputDirectory="$(ConfigurationName)"
+			IntermediateDirectory="$(ConfigurationName)"
+			ConfigurationType="10"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Command Files"
+			Filter="bat;cmd"
+			>
+			<File
+				RelativePath="..\..\..\..\prj\libtests\all\_alltest.bat"
+				>
+				<FileConfiguration
+					Name="release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Distributing test command file: $(InputFileName)"
+						CommandLine="copy /Y $(InputPath) ..\..\..\..\dist\test 1&gt; nul&#x0D;&#x0A;"
+						Outputs="..\..\..\..\dist\test\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter
+			Name="Script Files"
+			Filter="ipp;sc"
+			>
+			<File
+				RelativePath="..\..\..\..\prj\libtests\all\alltest.ipp"
+				>
+				<FileConfiguration
+					Name="debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying test script file: $(InputFileName)"
+						CommandLine="copy /Y $(InputPath) ..\..\libapps\stdcon\exe 1&gt; nul"
+						Outputs="..\..\libapps\stdcon\exe\$(InputFileName)"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Distributing test script file: $(InputFileName)"
+						CommandLine="copy /Y $(InputPath) ..\..\..\..\dist\test 1&gt; nul&#x0D;&#x0A;"
+						Outputs="..\..\..\..\dist\test\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter
+			Name="Data Files"
+			Filter="dat;in"
+			>
+			<File
+				RelativePath="..\..\..\..\prj\libtests\all\alltest.dat"
+				>
+				<FileConfiguration
+					Name="debug|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Copying test data file: $(InputFileName)"
+						CommandLine="copy /Y $(InputPath) ..\..\libapps\stdcon\exe 1&gt; nul"
+						Outputs="..\..\libapps\stdcon\exe\$(InputFileName)"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Distributing test data file: $(InputFileName)"
+						CommandLine="copy /Y $(InputPath) ..\..\..\..\dist\test 1&gt; nul&#x0D;&#x0A;"
+						Outputs="..\..\..\..\dist\test\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

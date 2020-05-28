@@ -1,0 +1,130 @@
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>                                                  <<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>              InfoSel++ Version 1.0               <<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>                                                  <<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+Copyright 2002-2020 by Jacek Biesiada, Adam Kachel, et. al.
+Silesian University of Technology, Department of Industrial Computer Science.
+
+
+About
+-----
+
+InfoSel++ is a portable software package including a C++ library for feature selection.
+Package include a infosel++ program with ready tens implemented well known feature 
+selection algorithms (list implemented algorithm is bellow) and user friendly library
+which can be used to created own algorithms based on probability.
+
+InfoSel++ is library of the C++ based on the information theory developed at Silesian 
+University of Technology in the Department of Computer Science and Department of Informatics 
+at Nicolaus Copernicus University in Torun.
+
+Feature selection is a fundamental problem in tasks like classification, data mining, 
+image processing, conceptual learning. The feature selection problems refer to the task 
+of identifying and selecting a useful subset of features. This subset is used to represent 
+the goal from a larger set often redundant, possibly irrelevant, features with different 
+associated measurement costs and/or risks.
+
+Algorithms of feature subset selection can be classified into three categories based on 
+whether algorithms of feature selections are done independently of the learning algorithm 
+or not. First technique is called the filter approach, where feature selection is performed 
+independently of the learning algorithm. When the goal is the maximization of the accuracy 
+of a given feature subset, we often use for the good of the subset, relevance function and 
+learnig algorithm. This defines the wrapper approach. The last type of selection approaches 
+is the embedded approache, where only classification algorythms with different types 
+of heuristic organization are used to search the important subset of features. 
+
+Durning the processes of desining selection algorithm we must take four basic issues 
+that determine the nature of search process into consideration:
+
+ - a starting point in features space
+ - an organization of the search
+ - an evaluation strategy of the selected subset
+ - a criterion for halting the search
+
+This library is based on the information theory and especially on probability, which allow 
+construct different types of feature selection algorythms. Our main goal is to provide 
+capability to do following task easily and quikly:
+
+ - implement and test new ideas and variants of feature ranking and selection algorithm.
+ - generate simple statistics about attributes.
+ - experiments with hybrid algorithm such as Markov Blanket, FCBF and other.
+ - compare algorithms on different datasets (e.g. compare algorithms ADC,SUC and datasets from UCI Repository or GDataset)
+ - joint to the another C++ libraries as part of them, but our library may be as a independent from of one.
+
+
+License terms
+-------------
+
+The full text of the GPL can be found in the file "COPYING".
+
+
+Directory structure
+-------------------
+
+   /build               :  project distribution building 
+     /GNUC++            :  building with any GNU C++ compiler
+       /out             :  intermediate object files
+     /VisualC++         :  building with the Microsoft Visual C++ ver.8
+   /dist                :  project distribution directory 
+     /bin               :  executable files
+     /lib               :  library/archive files
+     /include           :  C++ include files
+     /doc               :  documentation files
+     /src               :  sample source files
+     /make              :  sample make files
+       /out             :  intermediate object files
+     /test              :  command files for testing programs
+     /work              :  command files for running programs
+   /prj                 :  main project directory 
+     /library           :  source files of main library
+       /kernel          :  kernel source files
+       /frontend        :  front-end source files
+     /libpacks          :  standard package files with algorithm implementation
+     /libapps           :  source files of library applications
+       /stdcon          :  standard console source files
+       /samples         :  samples source files
+     /libtests          :  source files of library tests for integral (all) and units: API, UI and front-end
+     /libdocs           :  source files of library documentation
+       /examples        :  example files for data and scripts
+       /tutorial        :  tutorial source files
+       /reference       :  DOXYGEN reference files
+         /algs          :  standard algorithms reference files
+         /samples       :  main library reference files
+
+
+Prerequisites
+-------------
+
+InfoSel++ requires to build gcc-4.2. 
+
+
+Installation
+------------
+
+Refer to the file "INSTALL" for detailed installation instructions.
+
+
+Usage
+-----
+
+To write programs that use the InfoSel++ libraries, refer to the API
+documentation in the "prj/libdoc/manual" subdirectory of the project and
+the example programs in the "examples" subdirectory.
+
+
+Bug reports
+-----------
+
+Please report any bugs you encounter (Jacek Biesiada and Adam Kachel).
+
+
+Contribution
+------------
+
+We're always grateful for help in improving InfoSel++.
+
+
+
+

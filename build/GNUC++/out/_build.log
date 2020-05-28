@@ -1,0 +1,18 @@
+===== Target clean build:
+rm: cannot remove `../../dist/src/*.cpp': No such file or directory
+make: [clean] Error 1 (ignored)
+rm: cannot remove `../../dist/src/*.cxx': No such file or directory
+make: [clean] Error 1 (ignored)
+rm: cannot remove `../../dist/make/out/*.o': No such file or directory
+make: [clean] Error 1 (ignored)
+rm: cannot remove `../../dist/test/*.dat': No such file or directory
+make: [clean] Error 1 (ignored)
+rm: cannot remove `../../dist/test/*.ipp': No such file or directory
+make: [clean] Error 1 (ignored)
+rm: cannot remove `../../dist/work/*.dat': No such file or directory
+make: [clean] Error 1 (ignored)
+rm: cannot remove `../../dist/work/*.ipp': No such file or directory
+make: [clean] Error 1 (ignored)
+rm: cannot remove `../../dist/work/*.rep': No such file or directory
+make: [clean] Error 1 (ignored)
+no errors or up to date
